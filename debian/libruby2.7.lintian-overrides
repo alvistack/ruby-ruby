@@ -1,0 +1,6 @@
+libruby2.7: duplicate-font-file
+libruby2.7: initial-upload-closes-no-bugs
+libruby2.7: ruby-script-but-no-ruby-dep
+libruby2.7: script-not-executable
+libruby2.7: unstripped-binary-or-object
+libruby2.7: unusual-interpreter
