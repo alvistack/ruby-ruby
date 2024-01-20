@@ -83,7 +83,7 @@ AS_IF([test "$HAVE_BASERUBY" != no -a "`RUBYOPT=- $BASERUBY --disable=gems -e 'p
     ])
     RUBY_APPEND_OPTION(BASERUBY, "--disable=gems")
     BASERUBY_VERSION=`$BASERUBY -v`
-    $BASERUBY -C "$srcdir" tool/downloader.rb -d tool -e gnu config.guess config.sub >&AS_MESSAGE_FD
+    $BASERUBY -C "$srcdir" tool/downloader.rb -d tool -e gnu >&AS_MESSAGE_FD
 ], [
     HAVE_BASERUBY=no
 ])
