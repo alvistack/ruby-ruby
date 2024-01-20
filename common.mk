@@ -1510,8 +1510,7 @@ update-mspec:
 update-rubyspec:
 
 update-config_files: PHONY
-	$(Q) $(BASERUBY) -C "$(srcdir)" tool/downloader.rb -d tool --cache-dir=$(CACHE_DIR) -e gnu \
-	    config.guess config.sub
+	$(Q) $(BASERUBY) -C "$(srcdir)" tool/downloader.rb -d tool --cache-dir=$(CACHE_DIR) -e gnu
 
 update-coverage: main PHONY
 	$(XRUBY) -C "$(srcdir)" bin/gem install --no-document \
