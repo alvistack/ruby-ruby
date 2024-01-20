@@ -1,0 +1,4 @@
+ruby3.3 source: file-without-copyright-information
+ruby3.3 source: no-debian-changes
+ruby3.3 source: not-binnmuable-any-depends-any
+ruby3.3 source: weak-library-dev-dependency
