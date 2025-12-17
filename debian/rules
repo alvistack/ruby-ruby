@@ -1,0 +1,43 @@
+#!/usr/bin/make -f
+
+SHELL := /bin/bash
+
+export DEBIAN_DISABLE_RUBYGEMS_INTEGRATION = 1
+
+override_dh_autoreconf:
+	dh_autoreconf ./autogen.sh
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		--with-destdir=debian/tmp \
+		--prefix=/usr \
+		--bindir=/usr/bin \
+		--datadir=/usr/share \
+		--docdir=/usr/share/doc \
+		--libdir=/usr/lib \
+		--mandir=/usr/share/man \
+		--sysconfdir=/etc \
+		--disable-rpath \
+		--disable-static \
+		--enable-mkmf-verbose \
+		--enable-pie \
+		--enable-shared \
+		--enable-yjit \
+		--with-compress-debug-sections=no
+
+override_dh_auto_build:
+	dh_auto_build
+
+override_dh_auto_install:
+	dh_auto_install
+	fdupes -qnrps debian/tmp
+	find debian/tmp -type f -name '*.so' -exec chrpath -d {} \;
+	find debian/tmp -type f -exec sed -i 's?$(CURDIR)/debian/tmp??g' {} \;
+	find debian/tmp -type f -exec sed -i 's?^#!.*ruby.*?#!/usr/bin/ruby?g' {} \;
+
+override_dh_auto_test:
+
+override_dh_auto_clean:
+
+%:
+	dh $@
