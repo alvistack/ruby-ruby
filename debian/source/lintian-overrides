@@ -1,0 +1,4 @@
+ruby4.0 source: file-without-copyright-information
+ruby4.0 source: no-debian-changes
+ruby4.0 source: not-binnmuable-any-depends-any
+ruby4.0 source: weak-library-dev-dependency
