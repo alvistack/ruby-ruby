@@ -1,0 +1,10 @@
+usr/bin/erb
+usr/bin/irb
+usr/bin/rbs
+usr/bin/rdbg
+usr/bin/rdoc
+usr/bin/ri
+usr/bin/ruby
+usr/bin/syntax_suggest
+usr/bin/typeprof
+usr/share/man
