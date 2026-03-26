@@ -1,0 +1,4 @@
+ruby2.7 source: file-without-copyright-information
+ruby2.7 source: no-debian-changes
+ruby2.7 source: not-binnmuable-any-depends-any
+ruby2.7 source: weak-library-dev-dependency
