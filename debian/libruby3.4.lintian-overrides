@@ -1,0 +1,6 @@
+libruby3.4: duplicate-font-file
+libruby3.4: initial-upload-closes-no-bugs
+libruby3.4: ruby-script-but-no-ruby-dep
+libruby3.4: script-not-executable
+libruby3.4: unstripped-binary-or-object
+libruby3.4: unusual-interpreter
