@@ -1,0 +1,7 @@
+addFilter("devel-file-in-non-devel-package")
+addFilter("env-script-interpreter")
+addFilter("no-binary")
+addFilter("no-changelogname-tag")
+addFilter("non-executable-script")
+addFilter("rpm-buildroot-usage")
+addFilter("unstripped-binary-or-object")
